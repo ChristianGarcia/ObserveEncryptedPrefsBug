@@ -61,6 +61,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxWidth(),
                         saveValue = { plainSharedPreferences.saveRandomUUID() },
                         removeValue = { plainSharedPreferences.removeRandomUUID() },
+                        clearAll = { plainSharedPreferences.edit().clear().apply() },
                         logCurrentValue = { plainSharedPreferences.logCurrentValue(prefix = "Plain") }
                     )
                     Text("Encrypted")
@@ -68,6 +69,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxWidth(),
                         saveValue = { encryptedSharedPreferences.saveRandomUUID() },
                         removeValue = { encryptedSharedPreferences.removeRandomUUID() },
+                        clearAll = { encryptedSharedPreferences.edit().clear().apply() },
                         logCurrentValue = { encryptedSharedPreferences.logCurrentValue(prefix = "Encrypted") },
                     )
                 }
@@ -99,6 +101,7 @@ fun PreferenceManagementComponent(
     modifier: Modifier = Modifier,
     saveValue: (String) -> Unit,
     removeValue: () -> Unit,
+    clearAll: () -> Unit,
     logCurrentValue: () -> Unit,
 ) {
     Column(modifier = modifier) {
@@ -110,6 +113,9 @@ fun PreferenceManagementComponent(
             }
             Button(onClick = removeValue) {
                 Text("Remove")
+            }
+            Button(onClick = clearAll) {
+                Text("Clear")
             }
             Button(onClick = logCurrentValue) {
                 Text("Log current")
