@@ -1,6 +1,6 @@
 # ObserveEncryptedPrefsBug
 A minimum reproducible project to showcase a bug by which `SharedPreferences.OnSharedPreferenceChangeListener`
-isn't triggered if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
+isn't triggered on key removals if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
 
 ## How to check
 
