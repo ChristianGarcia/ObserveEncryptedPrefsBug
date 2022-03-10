@@ -1,6 +1,6 @@
 # ObserveEncryptedPrefsBug
 A minimum reproducible project to showcase a bug by which `SharedPreferences.OnSharedPreferenceChangeListener`
-isn't triggered on key removals if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
+isn't triggered on key removals/clearance if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
 
 ## How to check
 
@@ -22,5 +22,5 @@ Buttons
 * **Clear**: Clears all keys using `Editor#clear()`
 * **Log current**: Logs the current value in Logcat
 
-As you can verify, the `Remove` button under "Encrypted" doesn't log anything, as the callback isn't triggered.
-The `Remove` button under "Plain" logs just fine, as the callback is triggererd normally.
+As you can verify, the `Remove`/`Clear` buttons under "Encrypted" don't log anything, as the callback isn't triggered.
+These buttons under "Plain" log just fine, as the callback is triggererd normally.
