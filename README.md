@@ -4,7 +4,7 @@ isn't triggered if the `SharedPreferences` are wrapped as `EncryptedSharedPrefer
 
 ## How to check
 
-The project registers a `SharedPreferences.OnSharedPreferenceChangeListener` per each of the following objects:
+The project registers a `SharedPreferences.OnSharedPreferenceChangeListener` that will log when the preference has changed. There's a registered listener per each of the following objects:
 * Plain `SharedPreferences`
 * `EncryptedSharedPreferences`
 
@@ -20,8 +20,5 @@ It also provides the following UI to test their behavior:
 * **Remove**: Removes the stored preference using `Editor#remove()`
 * **Log current**: Logs the current value in Logcat
 
-Both SharedPreferences approaches have a registered Listener, that will log when the preference has changed.
-
-As you can verify, the `Remove` button under Encrypted doesn't log anything, as the callback isn't triggered.
+As you can verify, the `Remove` button under "Encrypted" doesn't log anything, as the callback isn't triggered.
 The `Remove` button under "Plain" logs just fine, as the callback is triggererd normally.
-
