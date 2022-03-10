@@ -1,5 +1,5 @@
 # ObserveEncryptedPrefsBug
-An minimum reproducible project to showcase a bug by which `SharedPreferences.OnSharedPreferenceChangeListener`
+A minimum reproducible project to showcase a bug by which `SharedPreferences.OnSharedPreferenceChangeListener`
 isn't triggered if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
 
 ## How to check
