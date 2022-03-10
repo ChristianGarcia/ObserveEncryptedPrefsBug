@@ -10,7 +10,8 @@ The project registers a `SharedPreferences.OnSharedPreferenceChangeListener` tha
 
 It also provides the following UI to test their behavior:
 
-<img src="https://user-images.githubusercontent.com/1465685/157737031-6098947d-a532-48aa-9f3f-587cbea355c8.png" alt="ui" width="300"/>
+<img src="https://user-images.githubusercontent.com/1465685/157738593-ff98efff-3bd3-4247-b8ef-7611ad68b7bb.png" alt="ui" width="300"/>
+
 
 * **Plain**: All buttons act against a plain `SharedPreferences` file (`/data/data/<appid>/shared_prefs/plain.xml`)
 * **Encrypted**: All buttons act against an `EncryptedSharedPreferences` file (`/data/data/<appid>/shared_prefs/encrypted.xml`)
@@ -18,6 +19,7 @@ It also provides the following UI to test their behavior:
 
 * **Save**: Generates a random UUID and stores it in preferences with the key `"key"`
 * **Remove**: Removes the stored preference using `Editor#remove()`
+* **Clear**: Clears all keys using `Editor#clear()`
 * **Log current**: Logs the current value in Logcat
 
 As you can verify, the `Remove` button under "Encrypted" doesn't log anything, as the callback isn't triggered.
