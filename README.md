@@ -13,7 +13,7 @@ It also provides the following UI to test their behavior:
 <img src="https://user-images.githubusercontent.com/1465685/157737031-6098947d-a532-48aa-9f3f-587cbea355c8.png" alt="ui" width="300"/>
 
 * **Plain**: All buttons act against a plain `SharedPreferences` file (`/data/data/<appid>/shared_prefs/plain.xml`)
-* **Encrypted**: All buttons act vs an `EncryptedSharedPreferences` tile (`/data/data/<appid>/shared_prefs/encrypted.xml`)
+* **Encrypted**: All buttons act against an `EncryptedSharedPreferences` file (`/data/data/<appid>/shared_prefs/encrypted.xml`)
 
 
 * **Save**: Generates a random UUID and stores it in preferences with the key `"key"`
