@@ -2,6 +2,8 @@
 A minimum reproducible project to showcase a bug by which `SharedPreferences.OnSharedPreferenceChangeListener`
 isn't triggered on key removals/clearance if the `SharedPreferences` are wrapped as `EncryptedSharedPreferences`.
 
+Bug report: https://issuetracker.google.com/issues/224994760
+
 ## How to check
 
 The project registers a `SharedPreferences.OnSharedPreferenceChangeListener` that will log when the preference has changed. There's a registered listener per each of the following objects:
